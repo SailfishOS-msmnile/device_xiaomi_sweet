@@ -22,6 +22,9 @@ BUILD_BROKEN_DUP_RULES := true
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_sweet
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_sweet
 
+# ADD MKBOOT CMD DTB
+BOARD_MKBOOTIMG_ARGS += --dtb $(DEVICE_PATH)/dtb-img/dtb
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
 TARGET_KERNEL_CONFIG := sweet_user_defconfig
