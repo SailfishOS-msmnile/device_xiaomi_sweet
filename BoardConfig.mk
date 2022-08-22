@@ -26,6 +26,9 @@ TARGET_PANEL_DIMENSION_MULTIPLIER := 0.1
 # Kernel
 TARGET_KERNEL_CONFIG := sweet_defconfig
 
+# ADD MKBOOT CMD DTB
+BOARD_MKBOOTIMG_ARGS += --dtb $(DEVICE_PATH)/dtb-img/dtb
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 ODM_MANIFEST_SKUS += sweet
